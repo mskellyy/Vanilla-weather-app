@@ -1,6 +1,6 @@
 .container {
   background: white;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 15px;
@@ -8,4 +8,12 @@
 
 body {
   background: lightpink;
+}
+
+.today-emoji {
+  width: 15%;
+}
+
+form {
+  padding-bottom: 20px;
 }
