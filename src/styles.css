@@ -1,7 +1,11 @@
 .container {
-  background: lightpink;
+  background: white;
   max-width: 1100px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 15px;
+}
+
+body {
+  background: lightpink;
 }
