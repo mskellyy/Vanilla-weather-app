@@ -11,7 +11,7 @@ body {
 }
 
 .today-emoji {
-  width: 25%;
+  width: 22%;
   padding-right: 5px;
 }
 
@@ -58,7 +58,7 @@ ul {
 }
 
 .today-info {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .today-temp {
