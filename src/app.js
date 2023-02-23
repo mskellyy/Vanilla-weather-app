@@ -68,16 +68,14 @@ function getCurrentLocation(event) {
 let myLocation = document.querySelector(".location");
 myLocation.addEventListener("click", getCurrentLocation);
 
-
 //Code for Weather Search
 
 function showSearchTemp(response) {
   let searchTemp = Math.round(response.data.main.temp);
   let pageTemp = document.querySelector(".today-temp");
-  let currentCity = document.querySelector(.city);
+  let currentCity = document.querySelector(".city");
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
-
 }
 
 function getCity(city) {
@@ -94,8 +92,7 @@ function handleCity(event) {
   getCity(searchCity);
 }
 
+let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleCity);
 
-// Code for changing current weather conditions 
-
-
+// Code for changing current weather conditions
