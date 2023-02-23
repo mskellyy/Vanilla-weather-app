@@ -83,7 +83,7 @@ form.addEventListener("submit", search);
 
 function showSearchTemp(response) {
   let searchTemp = Math.round(response.data.main.temp);
-  let pageTemp = document.querySelector(".todayTemp");
+  let pageTemp = document.querySelector(".today-temp");
   pageTemp.innerHTML = `${searchTemp}°`;
 }
 
