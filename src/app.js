@@ -78,3 +78,27 @@ function search(event) {
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", search);
+
+//Code for Weather Search
+
+function showSearchTemp(response) {
+  let searchTemp = Math.round(response.data.main.temp);
+  let pageTemp = document.querySelector(".todayTemp");
+  pageTemp.innerHTML = `${searchTemp}°`;
+}
+
+function getCity(city) {
+  let apiKey = "bae25ad73ded1eaf9b759c8aae273d3f";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showSearchTemp);
+}
+
+function handleCity(event) {
+  event.preventDefault();
+  let searchResult = document.querySelector("#search-bar-input");
+  let searchCity = `${searchResult.value}`;
+  getCity(searchCity);
+}
+
+form.addEventListener("submit", handleCity);
