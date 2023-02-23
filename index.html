@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--AXIOS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
+      integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!--Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -31,7 +38,8 @@
             <div class="col-4 d-grid gap-2 d-md-block">
               <input type="submit" class="btn btn-primary" value="Search" />
               <input
-                class="btn btn-primary"
+                class="btn btn-primary location"
+                id="currentLocation"
                 type="button"
                 value="My Location"
               />
@@ -39,7 +47,7 @@
           </div>
         </form>
         <section class="today-info">
-          <h1>New York</h1>
+          <h1><span class="city">New York</span></h1>
           <ul>
             <li class="date">
               <span class="dayDate">Saturday</span>,
