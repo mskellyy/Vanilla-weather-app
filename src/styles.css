@@ -11,7 +11,8 @@ body {
 }
 
 .today-emoji {
-  width: 20%;
+  width: 25%;
+  padding-right: 5px;
 }
 
 small {
@@ -54,4 +55,21 @@ li {
 ul {
   margin: 0;
   padding: 0;
+}
+
+.today-info {
+  margin-bottom: 15px;
+}
+
+.today-temp {
+  color: rgb(33, 33, 33);
+  font-size: 55px;
+  line-height: 0;
+  font-weight: 400;
+}
+
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -30px;
 }
