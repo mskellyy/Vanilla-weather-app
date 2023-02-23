@@ -67,3 +67,14 @@ function getCurrentLocation(event) {
 
 let myLocation = document.querySelector(".location");
 myLocation.addEventListener("click", getCurrentLocation);
+
+//Code for Search Bar - Change City
+function search(event) {
+  event.preventDefault();
+  let searchResult = document.querySelector("#search-bar-input");
+  let currentCity = document.querySelector(".city");
+  currentCity.innerHTML = `${searchResult.value}`;
+}
+
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", search);
