@@ -69,6 +69,7 @@ let myLocation = document.querySelector(".location");
 myLocation.addEventListener("click", getCurrentLocation);
 
 //Code for Search Bar - Change City
+
 function search(event) {
   event.preventDefault();
   let searchResult = document.querySelector("#search-bar-input");
