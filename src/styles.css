@@ -11,8 +11,9 @@ body {
 }
 
 .today-emoji {
-  width: 22%;
+  width: 30%;
   padding-right: 5px;
+  top: -10px;
 }
 
 small {
