@@ -20,6 +20,9 @@ small {
   text-align: center;
   display: block;
   margin: auto 0;
+  font-weight: 200;
+  font-size: 13px;
+  margin-top: 20px;
 }
 
 .weather {
