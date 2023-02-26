@@ -64,7 +64,7 @@ ul {
 .today-temp {
   color: rgb(33, 33, 33);
   font-size: 55px;
-  line-height: 0;
+  line-height: 1;
   font-weight: 400;
 }
 
