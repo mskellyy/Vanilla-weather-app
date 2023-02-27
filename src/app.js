@@ -74,10 +74,10 @@ function showSearchTemp(response) {
   let searchTemp = Math.round(response.data.main.temp);
   let pageTemp = document.querySelector(".today-temp");
   let currentCity = document.querySelector(".city");
-  let descripton = document.querySelector(".today-conditions");
+  let description = document.querySelector(".today-conditions");
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
-  descripton.innerHTML = response.data.weather[0].descripton;
+  description.innerHTML = response.data.weather[0].description;
 }
 
 function getCity(city) {
