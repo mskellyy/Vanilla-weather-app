@@ -81,3 +81,7 @@ ul {
 .today-conditions {
   text-transform: capitalize;
 }
+
+.now-date {
+  text-align: end;
+}
