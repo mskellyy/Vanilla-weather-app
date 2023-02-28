@@ -71,15 +71,18 @@ myLocation.addEventListener("click", getCurrentLocation);
 //Code for Weather Search
 
 function showSearchTemp(response) {
+  console.log(response.data);
   let searchTemp = Math.round(response.data.main.temp);
   let pageTemp = document.querySelector(".today-temp");
   let currentCity = document.querySelector(".city");
   let description = document.querySelector(".today-conditions");
   let todayHumidity = document.querySelector("#today-humidity");
+  let todayWind = document.querySelector("#today-wind");
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   todayHumidity.innerHTML = response.data.main.humidity;
+  todayWind.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function getCity(city) {
