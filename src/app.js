@@ -70,6 +70,29 @@ myLocation.addEventListener("click", getCurrentLocation);
 
 //Code for Weather Search
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours} ${minutes}`;
+}
+
 function showSearchTemp(response) {
   console.log(response.data);
   let searchTemp = Math.round(response.data.main.temp);
@@ -78,11 +101,13 @@ function showSearchTemp(response) {
   let description = document.querySelector(".today-conditions");
   let todayHumidity = document.querySelector("#today-humidity");
   let todayWind = document.querySelector("#today-wind");
+  let todayDate = document.querySelector("#date");
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   todayHumidity.innerHTML = response.data.main.humidity;
   todayWind.innerHTML = Math.round(response.data.wind.speed);
+  todayDate.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function getCity(city) {
