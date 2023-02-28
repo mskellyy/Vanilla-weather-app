@@ -75,9 +75,11 @@ function showSearchTemp(response) {
   let pageTemp = document.querySelector(".today-temp");
   let currentCity = document.querySelector(".city");
   let description = document.querySelector(".today-conditions");
+  let todayHumidity = document.querySelector("#today-humidity");
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
+  todayHumidity.innerHTML = response.data.main.humidity;
 }
 
 function getCity(city) {
