@@ -102,12 +102,18 @@ function showSearchTemp(response) {
   let todayHumidity = document.querySelector("#today-humidity");
   let todayWind = document.querySelector("#today-wind");
   let todayDate = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   pageTemp.innerHTML = `${searchTemp}°`;
   currentCity.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   todayHumidity.innerHTML = response.data.main.humidity;
   todayWind.innerHTML = Math.round(response.data.wind.speed);
   todayDate.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function getCity(city) {
@@ -126,5 +132,3 @@ function handleCity(event) {
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleCity);
-
-// Code for changing current weather conditions
