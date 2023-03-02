@@ -49,7 +49,20 @@ function showWeather(response) {
   myCity.innerHTML = `${response.data.name}`;
   let myTemp = document.querySelector(".today-temp");
   let temperature = Math.round(response.data.main.temp);
+  let description = document.querySelector(".today-conditions");
+  let todayHumidity = document.querySelector("#today-humidity");
+  let todayWind = document.querySelector("#today-wind");
+  let todayDate = document.querySelector("#search-date");
+  let iconElement = document.querySelector("#icon");
   myTemp.innerHTML = `${temperature}`;
+  description.innerHTML = response.data.weather[0].description;
+  todayHumidity.innerHTML = response.data.main.humidity;
+  todayWind.innerHTML = Math.round(response.data.wind.speed);
+  todayDate.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function retrievePosition(position) {
