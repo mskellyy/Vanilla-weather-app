@@ -101,7 +101,7 @@ function showSearchTemp(response) {
   let description = document.querySelector(".today-conditions");
   let todayHumidity = document.querySelector("#today-humidity");
   let todayWind = document.querySelector("#today-wind");
-  let todayDate = document.querySelector("#date");
+  let todayDate = document.querySelector("#search-date");
   let iconElement = document.querySelector("#icon");
 
   pageTemp.innerHTML = `${searchTemp}°`;
