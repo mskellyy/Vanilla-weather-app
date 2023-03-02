@@ -85,3 +85,9 @@ ul {
 .now-date {
   text-align: end;
 }
+
+.celsius,
+.fahrenheit {
+  text-decoration: none;
+  color: black;
+}
