@@ -106,6 +106,11 @@ function formatDate(timestamp) {
   return `${day} ${hours} ${minutes}`;
 }
 
+function displayForecast() {
+  let weekForecast = Document.querySelector("#week-forecast");
+  weekForecast.innerHTML = "Hello";
+}
+
 function showSearchTemp(response) {
   console.log(response.data);
   let pageTemp = document.querySelector(".today-temp");
@@ -127,6 +132,7 @@ function showSearchTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  displayForecast();
 }
 
 function getCity(city) {
