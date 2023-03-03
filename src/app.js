@@ -149,6 +149,8 @@ form.addEventListener("submit", handleCity);
 // Conversion
 function displayFahTemp(event) {
   event.preventDefault();
+  celLink.classList.add("notActive");
+  fahLink.classList.remove("notActive");
   let tempElement = document.querySelector(".today-temp");
   let fahTemp = (celTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahTemp);
@@ -156,6 +158,8 @@ function displayFahTemp(event) {
 
 function displayCelTemp(event) {
   event.preventDefault();
+  celLink.classList.remove("notActive");
+  fahLink.classList.add("notActive");
   let tempElement = document.querySelector(".today-temp");
   tempElement.innerHTML = Math.round(celTemp);
 }

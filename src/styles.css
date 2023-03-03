@@ -93,6 +93,16 @@ ul {
   color: black;
 }
 
+.celsius:active {
+  text-decoration: none;
+  color: lightpink;
+}
+
+.fahrenheit:active {
+  text-decoration: none;
+  color: lightpink;
+}
+
 .location {
   margin-left: 2px;
 }
@@ -104,4 +114,8 @@ ul {
 
 .search-input {
   margin-left: 10px;
+}
+
+.notActive {
+  color: #085ed6;
 }
