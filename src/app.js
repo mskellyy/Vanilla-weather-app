@@ -108,7 +108,6 @@ function formatDate(timestamp) {
 
 function showSearchTemp(response) {
   console.log(response.data);
-  let searchTemp = Math.round(response.data.main.temp);
   let pageTemp = document.querySelector(".today-temp");
   let currentCity = document.querySelector(".city");
   let description = document.querySelector(".today-conditions");
@@ -117,7 +116,8 @@ function showSearchTemp(response) {
   let todayDate = document.querySelector("#search-date");
   let iconElement = document.querySelector("#icon");
 
-  pageTemp.innerHTML = `${searchTemp}°`;
+  celTemp = Math.round(response.data.main.temp);
+  pageTemp.innerHTML = `${celTemp}`;
   currentCity.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   todayHumidity.innerHTML = response.data.main.humidity;
@@ -149,8 +149,23 @@ form.addEventListener("submit", handleCity);
 // Conversion
 function displayFahTemp(event) {
   event.preventDefault();
-  alert("Link clicked");
+  let tempElement = document.querySelector(".today-temp");
+  let fahTemp = (celTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahTemp);
 }
+
+function displayCelTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector(".today-temp");
+  tempElement.innerHTML = Math.round(celTemp);
+}
+
+let celTemp = null;
 
 let fahLink = document.querySelector("#fah-link");
 fahLink.addEventListener("click", displayFahTemp);
+
+let celLink = document.querySelector("#cel-link");
+celLink.addEventListener("click");
+
+handleCity();
