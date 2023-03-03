@@ -119,3 +119,41 @@ ul {
 .notActive {
   color: #085ed6;
 }
+
+.card-title {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #878787;
+
+  font-weight: 200;
+  line-height: 28px;
+}
+
+.weekday-emoji {
+  width: 50%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.card-body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-text {
+  color: #878787;
+  font-weight: 200;
+  line-height: 28px;
+  font-size: 15px;
+}
+
+.forecast {
+  color: #878787;
+  font-weight: 300;
+  line-height: 28px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
