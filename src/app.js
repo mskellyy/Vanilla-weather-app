@@ -166,6 +166,6 @@ let fahLink = document.querySelector("#fah-link");
 fahLink.addEventListener("click", displayFahTemp);
 
 let celLink = document.querySelector("#cel-link");
-celLink.addEventListener("click");
+celLink.addEventListener("click", displayCelTemp);
 
 handleCity();
