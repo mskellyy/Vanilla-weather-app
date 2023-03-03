@@ -145,3 +145,12 @@ function handleCity(event) {
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleCity);
+
+// Conversion
+function displayFahTemp(event) {
+  event.preventDefault();
+  alert("Link clicked");
+}
+
+let fahLink = document.querySelector("#fah-link");
+fahLink.addEventListener("click", displayFahTemp);
