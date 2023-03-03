@@ -11,9 +11,8 @@ body {
 }
 
 .today-emoji {
-  width: 25%;
+  width: 22%;
   padding-right: 5px;
-  top: -40px;
 }
 
 small {
@@ -124,10 +123,9 @@ ul {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
   color: #878787;
-
   font-weight: 200;
   line-height: 28px;
 }
@@ -136,6 +134,7 @@ ul {
   width: 50%;
   padding: 5px;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .card-body {
@@ -148,6 +147,7 @@ ul {
   font-weight: 200;
   line-height: 28px;
   font-size: 15px;
+  margin-bottom: 5px;
 }
 
 .forecast {
@@ -156,4 +156,13 @@ ul {
   line-height: 28px;
   font-size: 15px;
   margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.card-group {
+  margin-top: 20px;
+}
+
+.forecast-max {
+  font-weight: 400;
 }
