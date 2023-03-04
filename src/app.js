@@ -107,7 +107,7 @@ function formatDate(timestamp) {
 }
 
 function displayForecast() {
-  let weekForecast = Document.querySelector("#week-forecast");
+  let weekForecast = document.querySelector("#week-forecast");
   weekForecast.innerHTML = "Hello";
 }
 
