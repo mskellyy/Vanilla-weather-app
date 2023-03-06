@@ -178,4 +178,4 @@ fahLink.addEventListener("click", displayFahTemp);
 let celLink = document.querySelector("#cel-link");
 celLink.addEventListener("click", displayCelTemp);
 
-handleCity();
+getCity("Paris");
