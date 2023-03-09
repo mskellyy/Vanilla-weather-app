@@ -106,9 +106,19 @@ function formatDate(timestamp) {
   return `${day} ${hours} ${minutes}`;
 }
 
+// WEEK FORECAST CODE
 function displayForecast() {
   let weekForecast = document.querySelector("#week-forecast");
-  weekForecast.innerHTML = "Hello";
+  let forecastHTML = "";
+  forecastHTML = `      <div class="card" style="width: 13rem">
+            <div class="card-body">
+        <h2 class="card-title">Sunday</h2>
+              <img src="img/clear.png" width="100" class="weekday-emoji">
+        <p class="card-text"><span class="forecast-max">28</span>° |
+          <span class="forecast-min">16</span>°</p>
+        <p class="forecast">Sunny</p>
+        </div>`;
+  weekForecast.innerHTML = forecastHTML;
 }
 
 function showSearchTemp(response) {
