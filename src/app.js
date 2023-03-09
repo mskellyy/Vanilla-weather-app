@@ -121,6 +121,8 @@ function displayForecast() {
   weekForecast.innerHTML = forecastHTML;
 }
 
+// code for searching temp API
+
 function showSearchTemp(response) {
   console.log(response.data);
   let pageTemp = document.querySelector(".today-temp");
