@@ -109,15 +109,21 @@ function formatDate(timestamp) {
 // WEEK FORECAST CODE
 function displayForecast() {
   let weekForecast = document.querySelector("#week-forecast");
-  let forecastHTML = "";
-  forecastHTML = `      <div class="card" style="width: 13rem">
-            <div class="card-body">
-        <h2 class="card-title">Sunday</h2>
-              <img src="img/clear.png" width="100" class="weekday-emoji">
-        <p class="card-text"><span class="forecast-max">28</span>° |
-          <span class="forecast-min">16</span>°</p>
-        <p class="forecast">Sunny</p>
-        </div>`;
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `  <div class="card-group" id="week-forecast">
+            <div class="card" style="width: 13rem">
+              <div class="card-body">
+                <h2 class="card-title">Sunday</h2>
+                <img src="img/clear.png" width="100" class="weekday-emoji" />
+                <p class="card-text">
+                  <span class="forecast-max">28</span>° |
+                  <span class="forecast-min">16</span>°
+                </p>
+                <p class="forecast">Sunny</p>
+              </div> `;
+  forecastHTML = forecastHTML + `</div>`;
   weekForecast.innerHTML = forecastHTML;
 }
 
