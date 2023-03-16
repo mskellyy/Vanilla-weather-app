@@ -110,9 +110,11 @@ function formatDate(timestamp) {
 function displayForecast() {
   let weekForecast = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row"> <div class="card-group" id="week-forecast">`;
-  forecastHTML =
-    forecastHTML +
-    `   <div class="card" style="width: 13rem">
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   <div class="card col-2" style="width: 13rem">
               <div class="card-body">
                 <h2 class="card-title">Sunday</h2>
                 <img src="img/clear.png" width="100" class="weekday-emoji" />
@@ -122,18 +124,8 @@ function displayForecast() {
                 </p>
                 <p class="forecast">Sunny</p>
               </div> </div>`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="card" style="width: 13rem">
-              <div class="card-body">
-                <h2 class="card-title">Monday</h2>
-                <img src="img/clear.png" width="100" class="weekday-emoji" />
-                <p class="card-text">
-                  <span class="forecast-max">28</span>° |
-                  <span class="forecast-min">16</span>°
-                </p>
-                <p class="forecast">Sunny</p>
-              </div> </div>`;
+  });
+
   forecastHTML = forecastHTML + `</div> </div>`;
   weekForecast.innerHTML = forecastHTML;
 }
