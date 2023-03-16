@@ -109,6 +109,7 @@ function formatDate(timestamp) {
 // WEEK FORECAST CODE
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let weekForecast = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row"> <div class="card-group" id="week-forecast">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
