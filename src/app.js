@@ -107,7 +107,8 @@ function formatDate(timestamp) {
 }
 
 // WEEK FORECAST CODE
-function displayForecast() {
+
+function displayForecast(response) {
   let weekForecast = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row"> <div class="card-group" id="week-forecast">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -137,6 +138,7 @@ function getForecast(coordinates) {
   let apiKey = `f3009e4852fa0a079dab291dabf020c4`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showSearchTemp(response) {
@@ -208,5 +210,3 @@ let celLink = document.querySelector("#cel-link");
 celLink.addEventListener("click", displayCelTemp);
 
 getCity("Paris");
-
-displayForecast();
