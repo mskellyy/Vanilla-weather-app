@@ -114,9 +114,9 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `   <div class="card col-2" style="width: 13rem">
+      `   <div class="card" style="width: 13rem">
               <div class="card-body">
-                <h2 class="card-title">Sunday</h2>
+                <h2 class="card-title">${day}</h2>
                 <img src="img/clear.png" width="100" class="weekday-emoji" />
                 <p class="card-text">
                   <span class="forecast-max">28</span>° |
@@ -131,6 +131,13 @@ function displayForecast() {
 }
 
 // code for searching temp API
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = `f3009e4852fa0a079dab291dabf020c4`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+}
 
 function showSearchTemp(response) {
   console.log(response.data);
@@ -153,7 +160,8 @@ function showSearchTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  displayForecast();
+
+  getForecast(response.data.coord);
 }
 
 function getCity(city) {
@@ -200,3 +208,5 @@ let celLink = document.querySelector("#cel-link");
 celLink.addEventListener("click", displayCelTemp);
 
 getCity("Paris");
+
+displayForecast();
