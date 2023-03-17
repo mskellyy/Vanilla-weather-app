@@ -106,6 +106,13 @@ function formatDate(timestamp) {
   return `${day} ${hours} ${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let weekdate = new Date(timestamp * 1000);
+  let weekday = weekdate.getDay();
+  let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return weekdays[weekday];
+}
+
 // WEEK FORECAST CODE
 
 function displayForecast(response) {
@@ -113,16 +120,17 @@ function displayForecast(response) {
   let weekForecast = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row"> <div class="card-group" id="week-forecast">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `   <div class="card" style="width: 13rem">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `   <div class="card" style="width: 13rem">
               <div class="card-body">
-                <h2 class="card-title">${forecastDay.dt}</h2>
+                <h2 class="card-title">${formatDay(forecastDay.dt)}</h2>
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png" 
-                width="42" class="weekday-emoji" />
+                width="70" class="weekday-emoji" />
                 <p class="card-text">
                   <span class="forecast-max">${Math.round(
                     forecastDay.temp.max
@@ -133,6 +141,7 @@ function displayForecast(response) {
                 </p>
                 <p class="forecast">${forecastDay.weather[0].description}</p>
               </div> </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div> </div>`;
