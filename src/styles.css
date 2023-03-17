@@ -1,9 +1,10 @@
 .container {
   background: white;
-  max-width: 770px;
+  max-width: 775px;
   margin: 50px auto;
   padding: 20px;
-  border-radius: 7px;
+  border: 2px outset rgba(255, 182, 192, 0.4);
+  border-radius: 20px;
 }
 
 body {
@@ -25,8 +26,8 @@ small {
 }
 
 .weather {
-  border: 1px solid #dadde1;
-  border-radius: 7px;
+  border: 2px outset rgba(255, 182, 192, 0.4);
+  border-radius: 20px;
   max-width: 800px;
   margin: 5px auto;
   padding: 20px;
@@ -164,4 +165,13 @@ ul {
 
 .forecast-max {
   font-weight: 400;
+}
+
+.card {
+  border: 3px outset rgba(255, 182, 192, 0.4);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 9px 44px rgba(0, 0, 0, 0.1);
 }
