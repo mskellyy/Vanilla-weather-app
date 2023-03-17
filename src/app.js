@@ -109,22 +109,29 @@ function formatDate(timestamp) {
 // WEEK FORECAST CODE
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let weekForecast = document.querySelector("#week-forecast");
   let forecastHTML = `<div class="row"> <div class="card-group" id="week-forecast">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
-  days.forEach(function (day) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `   <div class="card" style="width: 13rem">
               <div class="card-body">
-                <h2 class="card-title">${day}</h2>
-                <img src="img/clear.png" width="100" class="weekday-emoji" />
+                <h2 class="card-title">${forecastDay.dt}</h2>
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" 
+                width="42" class="weekday-emoji" />
                 <p class="card-text">
-                  <span class="forecast-max">28</span>° |
-                  <span class="forecast-min">16</span>°
+                  <span class="forecast-max">${Math.round(
+                    forecastDay.temp.max
+                  )}</span>° |
+                  <span class="forecast-min">${Math.round(
+                    forecastDay.temp.min
+                  )}</span>°
                 </p>
-                <p class="forecast">Sunny</p>
+                <p class="forecast">${forecastDay.weather[0].description}</p>
               </div> </div>`;
   });
 
