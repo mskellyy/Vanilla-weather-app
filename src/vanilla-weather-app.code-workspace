@@ -1,14 +1,17 @@
 {
   "folders": [
-	{
-		"path": ".."
-	},
-	{
-		"path": "../../../weatherApp GitHub/weatherApp"
-	},
-	{
-		"path": "../../../../FunGuys/funGuys"
-	}
-],
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../../weatherApp GitHub/weatherApp"
+    },
+    {
+      "path": "../../../../../Documents/WEB DEV/priceIsRight"
+    },
+    {
+      "path": "../../../../../Documents/WEB DEV/FunGuys/funGuys"
+    }
+  ],
   "settings": {}
 }
