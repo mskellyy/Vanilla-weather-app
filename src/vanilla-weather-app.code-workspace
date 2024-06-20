@@ -1,17 +1,41 @@
 {
   "folders": [
     {
+      "name": "Vanilla-weather-app",
       "path": ".."
     },
     {
+      "name": "weatherApp",
       "path": "../../../weatherApp GitHub/weatherApp"
     },
     {
-      "path": "../../../../../Documents/WEB DEV/priceIsRight"
+      "name": "funGuys",
+      "path": "../../../../../Documents/WEB DEV/FunGuys/funGuys"
     },
     {
-      "path": "../../../../../Documents/WEB DEV/FunGuys/funGuys"
+      "name": "casaTrust",
+      "path": "../../../../../Documents/WEB DEV/casaTrust"
+    },
+    {
+      "name": "RESPONSIVE CLASS",
+      "path": "../../../RESPONSIVE CLASS"
+    },
+    {
+      "name": "Homework",
+      "path": "../../../Homework"
+    },
+    {
+      "name": "world-clock",
+      "path": "../../../world-clock"
+    },
+    {
+      "path": "../../../../portfolio"
+    },
+    {
+      "path": "../../../../Green Cap Enviromental/greenCap"
     }
   ],
-  "settings": {}
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+  }
 }
