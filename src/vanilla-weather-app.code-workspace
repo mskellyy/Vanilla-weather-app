@@ -33,9 +33,15 @@
     },
     {
       "path": "../../../../Green Cap Enviromental/greenCap"
+    },
+    {
+      "path": "../../../../Static Templates"
+    },
+    {
+      "path": "../../../../lana-project"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+    "liveServer.settings.multiRootWorkspaceName": "lana-project"
   }
 }
